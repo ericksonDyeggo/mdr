@@ -14,6 +14,7 @@ if [ ! -d "$HOME/.mdr" ]; then
     ln -s ~/.mdr/gitignore ~/.gitignore
     ln -s ~/.mdr/gitconfig ~/.gitconfig
     chsh -s /bin/zsh
+    vim -N "+set hidden" "+syntax on" +PlugInstall +qall
 else
     echo "MDR is already installed"
 fi
