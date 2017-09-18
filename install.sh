@@ -15,6 +15,7 @@ if [ ! -d "$HOME/.mdr" ]; then
     ln -fs ~/.mdr/gitconfig ~/.gitconfig
     ln -fs ~/.mdr/tmux.conf ~/.tmux.conf
     chsh -s /bin/zsh
+    vim -N "+set hidden" "+syntax on" +PlugInstall +qall
 else
     echo "MDR is already installed"
 fi
