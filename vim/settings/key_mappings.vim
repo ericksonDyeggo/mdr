@@ -7,6 +7,13 @@ nnoremap <Leader>rn :call RunNearestSpec()<CR>
 nnoremap <Leader>rl :call RunLastSpec()<CR>
 nnoremap <Leader>ra :call RunAllSpecs()<CR>
 
+" vim-test mappings
+nmap <silent> <leader>t :TestNearest<CR>
+nmap <silent> <leader>T :TestFile<CR>
+nmap <silent> <leader>a :TestSuite<CR>
+nmap <silent> <leader>l :TestLast<CR>
+nmap <silent> <leader>g :TestVisit<CR>
+
 "Clear current search highlight by double tapping //
 nmap <silent> // :nohlsearch<CR>
 

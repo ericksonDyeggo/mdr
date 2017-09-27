@@ -5,6 +5,7 @@ end
 call plug#begin('~/.vim/bundle')
 
 " Define bundles via Github repos
+Plug 'powerline/powerline'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'scrooloose/nerdtree' " file explorer
 Plug 'ctrlpvim/ctrlp.vim' " fuzzy finder
@@ -27,6 +28,11 @@ Plug 'rking/ag.vim'
 Plug 'godlygeek/tabular'
 Plug 'jiangmiao/auto-pairs'
 Plug 'tpope/vim-repeat'
+Plug 'elixir-editors/vim-elixir'
+Plug 'janko-m/vim-test'
+Plug 'carlosgaldino/elixir-snippets'
+Plug 'posva/vim-vue'
+Plug 'Quramy/tsuquyomi-vue'
 
 if filereadable(expand("~/.plugins.vim.local"))
   source ~/.plugins.vim.local
