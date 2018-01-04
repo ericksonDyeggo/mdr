@@ -2,10 +2,6 @@
 if [ ! -d "$HOME/.mdr" ]; then
     echo "Installing MDR for the first time"
     git clone --recursive https://github.com/sorin-ionescu/prezto.git "$HOME/.zprezto"
-    setopt EXTENDED_GLOB
-    for rcfile in "${ZDOTDIR:-$HOME}"/.zprezto/runcoms/^README.md; do
-      ln -s "$rcfile" "${ZDOTDIR:-$HOME}/.${rcfile:t}"
-    done
     git clone --depth=1 https://github.com/ericksonDyeggo/mdr.git "$HOME/.mdr"
     ln -fs ~/.mdr/zshrc ~/.zshrc
     ln -fs ~/.mdr/zpreztorc ~/.zpreztorc
