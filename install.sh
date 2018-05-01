@@ -1,7 +1,12 @@
 # !/bin/sh
 if [ ! -d "$HOME/.mdr" ]; then
     echo "Installing MDR for the first time"
-    git clone --recursive https://github.com/sorin-ionescu/prezto.git "$HOME/.zprezto"
+    if [ ! -d "$HOME/.zprezto" ]; then
+      git clone --recursive https://github.com/sorin-ionescu/prezto.git "$HOME/.zprezto"
+    fi
+    git clone https://github.com/powerline/fonts.git --depth=1 "$HOME/fonts"
+    ~/fonts/install.sh
+    rm -rf ~/fonts
     git clone --depth=1 https://github.com/ericksonDyeggo/mdr.git "$HOME/.mdr"
     ln -fs ~/.mdr/zshrc ~/.zshrc
     ln -fs ~/.mdr/zpreztorc ~/.zpreztorc
