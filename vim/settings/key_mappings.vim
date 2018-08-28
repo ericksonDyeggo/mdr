@@ -93,6 +93,6 @@ nnoremap <silent> <C-\> :LocalCloseNerdTree<cr>
 " Index ctags from any project, including those outside Rails
 map <Leader>ct :!ctags -R .<CR>
 
-"grep the current word using K (mnemonic Kurrent)
-nnoremap <silent> K :Ag <cword><CR>
+"grep the current word using F (mnemonic Find)
+nnoremap <silent> F :Ag <cword><CR>
 

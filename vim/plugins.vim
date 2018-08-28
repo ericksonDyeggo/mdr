@@ -8,6 +8,7 @@ call plug#begin('~/.vim/bundle')
 Plug 'powerline/powerline'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'scrooloose/nerdtree' " file explorer
+Plug 'Xuyuanp/nerdtree-git-plugin' " Git plugin for NerdTree
 Plug 'ctrlpvim/ctrlp.vim' " fuzzy finder
 Plug 'pbrisbin/vim-mkdir' " create folder if it doesn't exist
 Plug 'scrooloose/syntastic' " syntax checking
@@ -31,6 +32,8 @@ Plug 'janko-m/vim-test'
 Plug 'carlosgaldino/elixir-snippets'
 Plug 'posva/vim-vue'
 Plug 'Quramy/tsuquyomi-vue'
+Plug 'slashmili/alchemist.vim'
+Plug 'elixir-editors/vim-elixir'
 
 if filereadable(expand("~/.plugins.vim.local"))
   source ~/.plugins.vim.local
