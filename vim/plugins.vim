@@ -34,6 +34,10 @@ Plug 'posva/vim-vue'
 Plug 'Quramy/tsuquyomi-vue'
 Plug 'slashmili/alchemist.vim'
 Plug 'elixir-editors/vim-elixir'
+Plug 'tpope/vim-classpath'
+Plug 'tpope/vim-fireplace'
+Plug 'venantius/vim-eastwood'
+Plug 'venantius/vim-cljfmt'
 
 if filereadable(expand("~/.plugins.vim.local"))
   source ~/.plugins.vim.local
