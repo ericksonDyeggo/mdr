@@ -42,12 +42,12 @@ nnoremap <silent> <c-l> :TmuxNavigateRight<cr>
 " If the current buffer has never been saved, it will have no name,
 " call the file browser to save it, otherwise just save it.
 command -nargs=0 -bar Update if &modified
-                           \|    if empty(bufname('%'))
-                           \|        browse confirm write
-                           \|    else
-                           \|        confirm write
-                           \|    endif
-                           \|endif
+      \|    if empty(bufname('%'))
+        \|        browse confirm write
+        \|    else
+          \|        confirm write
+          \|    endif
+          \|endif
 nnoremap <silent> <C-S> :<C-u>Update<CR>
 
 " vim reload
@@ -81,12 +81,12 @@ map <Leader>fl :call VtrSendCommand('flog ' . expand("%"))<CR>
 " will insert tab at beginning of line,
 " will use completion if not at beginning
 function! InsertTabWrapper()
-    let col = col('.') - 1
-    if !col || getline('.')[col - 1] !~ '\k'
-        return "\<tab>"
-    else
-        return "\<c-p>"
-    endif
+  let col = col('.') - 1
+  if !col || getline('.')[col - 1] !~ '\k'
+    return "\<tab>"
+  else
+    return "\<c-p>"
+  endif
 endfunction
 inoremap <Tab> <c-r>=InsertTabWrapper()<cr>
 inoremap <S-Tab> <c-n>
@@ -109,4 +109,3 @@ map <Leader>ct :!ctags -R .<CR>
 
 "grep the current word using F (mnemonic Find)
 nnoremap <silent> F :Ag <cword><CR>
-

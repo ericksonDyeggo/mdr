@@ -85,8 +85,31 @@ if executable('ag')
   " ag is fast enough that CtrlP doesn't need to cache
   let g:ctrlp_use_caching = 0
 endif
-" Default to filename searches
-let g:ctrlp_by_filename = 1
+
+" Use The Silver Searcher https://github.com/ggreer/the_silver_searcher
+if executable('ag')
+  " Use Ag over Grep
+  set grepprg=ag\ --nogroup\ --nocolor
+
+  " Use ag in CtrlP for listing files. Lightning fast and respects .gitignore
+  " let g:ctrlp_user_command = 'ag %s -l --nocolor --hidden -g ""'
+  " let g:ctrlp_user_command =
+  "     \ 'ag %s --files-with-matches -g "" --ignore "\.git$\|\.hg$\|\.svn$"'
+
+  " Define composer.json as anchor to root path on laravel projects
+  " set ag to ignore /vendor folder in laravel projects
+  " set ag to ignore /node_modules folder in react/npm projects
+  let g:ctrlp_user_command = {
+        \ 'types': {
+        \   1: ['composer.json', 'ag %s -l --hidden -g "" --ignore ".git" --ignore "vendor/" | egrep -v "\.(git|hg|svn)/|.log$"'],
+        \   2: ['package.json', 'ag %s -l --hidden -g "" --ignore ".git" --ignore "node_modules/" | egrep -v "\.(git|hg|svn)/|.log$"'],
+        \ },
+        \ 'fallback': 'ag %s -l --hidden -g "" --ignore ".git" | egrep -v "\.(git|hg|svn)/|.log$"'
+        \ }
+
+  " ag is fast enough that CtrlP doesn't need to cache
+  let g:ctrlp_use_caching = 0
+endif
 
 " Make it obvious where 80 characters is
 set textwidth=80
