@@ -9,6 +9,7 @@ Plug 'powerline/powerline'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'scrooloose/nerdtree' " file explorer
 Plug 'Xuyuanp/nerdtree-git-plugin' " Git plugin for NerdTree
+Plug 'airblade/vim-gitgutter'
 Plug 'ctrlpvim/ctrlp.vim' " fuzzy finder
 Plug 'pbrisbin/vim-mkdir' " create folder if it doesn't exist
 Plug 'scrooloose/syntastic' " syntax checking
@@ -38,6 +39,8 @@ Plug 'tpope/vim-classpath'
 Plug 'tpope/vim-fireplace'
 Plug 'venantius/vim-eastwood'
 Plug 'venantius/vim-cljfmt'
+Plug 'Yggdroot/indentLine'
+Plug 'terryma/vim-multiple-cursors'
 
 if filereadable(expand("~/.plugins.vim.local"))
   source ~/.plugins.vim.local
