@@ -41,6 +41,13 @@ Plug 'venantius/vim-eastwood'
 Plug 'venantius/vim-cljfmt'
 Plug 'Yggdroot/indentLine'
 Plug 'terryma/vim-multiple-cursors'
+Plug 'mustache/vim-mustache-handlebars'
+
+" Track the engine.
+Plug 'SirVer/ultisnips'
+
+" Snippets are separated from the engine. Add this if you want them:
+Plug 'honza/vim-snippets'
 
 if filereadable(expand("~/.plugins.vim.local"))
   source ~/.plugins.vim.local

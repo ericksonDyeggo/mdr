@@ -1,5 +1,3 @@
-'ctrlpvim/ctrlp.vim'
-
 " Switch between the last two files
 nnoremap <Leader><Leader> <c-^>
 
