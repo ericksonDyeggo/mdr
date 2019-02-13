@@ -16,6 +16,6 @@ fi
 # Customize to your needs at .zsh.custom directory
 if [ -d $HOME/.zsh.custom/  ]; then
   if [ "$(ls -A $HOME/.zsh.custom/)" ]; then
-    for config_file ($HOME/.zsh.custom/*.zsh) source $config_file
-    fi
+    for config_file ($HOME/.zsh.custom/*.zsh*) source $config_file
   fi
+fi
