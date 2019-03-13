@@ -179,12 +179,6 @@ let g:solarized_termtrans=1
 syntax enable
 set background=dark
 
-if filereadable(expand("./bin/rspec"))
-  let g:rspec_command = "VtrSendCommandToRunner! ./bin/rspec {spec}"
-else
-  let g:rspec_command = "VtrSendCommandToRunner! rspec {spec}"
-endif
-
 " Local config
 if filereadable($HOME . "/.vimrc.local")
   source ~/.vimrc.local
